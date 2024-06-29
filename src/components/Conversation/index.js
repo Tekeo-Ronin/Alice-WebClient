@@ -1,27 +1,25 @@
-import { Box, Stack } from "@mui/material";
-import React from "react";
-
-import Header from "./Header";
-import Body from "./Body";
-import Footer from "./Footer";
+import {  Box, Stack} from '@mui/material';
+import React from 'react';
+import { useTheme } from "@mui/material/styles";
+import Header from './Header';
+import Footer from './Footer';
+import Message from './Message';
 
 const Conversation = () => {
+    const theme = useTheme();
   return (
-    <Stack height={"100%"} maxHeight={"100vh"}>
-      {/* chat header */}
-      <Header />
-      {/* chat body */}
-      <Box
-        width={"100%"}
-        sx={{ flexGrow: 1, height: "100vh", overflowY: "scroll" }}
-      >
-        <Body />
-      </Box>
+    <Stack height={'100%'} maxHeight={'100vh'} width={'auto'}>
 
-      {/* chat footer */}
-      <Footer />
+        {/* Chat header */}
+        <Header/>
+        {/* Msg */}
+        <Box className='scrollbar' width={"100%"} sx={{flexGrow:1, height:'100%', overflowY:'scroll'}}>
+        <Message menu={true}/>
+        </Box>
+        {/* Chat footer */}
+       <Footer/>
     </Stack>
-  );
-};
+  )
+}
 
-export default Conversation;
+export default Conversation

@@ -19,7 +19,7 @@ const Profile_Menu = [
     icon: <Gear />,
   },
   {
-    title: "Profile",
+    title: "Logout",
     icon: <SignOut />,
   },
 ];
@@ -44,6 +44,77 @@ const Nav_Setting = [
     index: 3,
     icon: <GearSix />,
   },
+];
+
+const CallLogs = [
+  {
+    id:0,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    missed: false,
+    incoming: true,
+  },
+  {
+    id:1,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    missed: true,
+    incoming: true,
+  },
+  {
+    id:2,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    missed: false,
+    incoming: false,
+  },
+  {
+    id:3,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    missed: false,
+    incoming: true,
+  },
+  {
+    id:4,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    missed: true,
+    incoming: true,
+  }
+];
+
+const MembersList = [
+  {
+    id:0,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    online: true
+  },
+  {
+    id:1,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    online: false
+  },
+  {
+    id:2,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    online: true
+  },
+  {
+    id:3,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    online: false
+  },
+  {
+    id:4,
+    img: faker.image.avatar(),
+    name: faker.name.firstName(),
+    online: true
+  }
 ];
 
 const ChatList = [
@@ -132,7 +203,7 @@ const ChatList = [
 const Chat_History = [
   {
     type: "msg",
-    message: "Hi, How are you ?",
+    message: "Hi 👋🏻, How are ya ?",
     incoming: true,
     outgoing: false,
   },
@@ -142,13 +213,13 @@ const Chat_History = [
   },
   {
     type: "msg",
-    message: "Hi, not bad, u ?",
+    message: "Hi 👋 Panda, not bad, u ?",
     incoming: false,
     outgoing: true,
   },
   {
     type: "msg",
-    message: "Can you send me a image?",
+    message: "Can you send me an abstarct image?",
     incoming: false,
     outgoing: true,
   },
@@ -220,6 +291,73 @@ const Message_options = [
   },
 ];
 
+const SHARED_LINKS = [
+  {
+    type: "msg",
+    subtype: "link",
+    preview: faker.image.cats(),
+    message: "Yep, I can also do that",
+    incoming: true,
+    outgoing: false,
+  },
+  {
+    type: "msg",
+    subtype: "link",
+    preview: faker.image.cats(),
+    message: "Yep, I can also do that",
+    incoming: true,
+    outgoing: false,
+  },
+  {
+    type: "msg",
+    subtype: "link",
+    preview: faker.image.cats(),
+    message: "Yep, I can also do that",
+    incoming: true,
+    outgoing: false,
+  },
+  {
+    type: "msg",
+    subtype: "link",
+    preview: faker.image.cats(),
+    message: "Yep, I can also do that",
+    incoming: true,
+    outgoing: false,
+  }
+]
+
+const SHARED_DOCS = [
+  {
+    type: "msg",
+    subtype: "doc",
+    message: "Yes sure, here you go.",
+    incoming: true,
+    outgoing: false,
+  },
+  {
+    type: "msg",
+    subtype: "doc",
+    message: "Yes sure, here you go.",
+    incoming: true,
+    outgoing: false,
+  },
+  {
+    type: "msg",
+    subtype: "doc",
+    message: "Yes sure, here you go.",
+    incoming: true,
+    outgoing: false,
+  },
+  {
+    type: "msg",
+    subtype: "doc",
+    message: "Yes sure, here you go.",
+    incoming: true,
+    outgoing: false,
+  },
+ 
+]
+
 export {
   Profile_Menu,
   Nav_Setting,
@@ -227,4 +365,8 @@ export {
   ChatList,
   Chat_History,
   Message_options,
+  SHARED_DOCS,
+  SHARED_LINKS,
+  CallLogs,
+  MembersList
 };
