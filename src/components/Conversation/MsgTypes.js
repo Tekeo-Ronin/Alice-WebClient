@@ -220,7 +220,6 @@ const Timeline = ({ el }) => {
         {el.text}
       </Typography>
       <Divider width="46%" />
-      <MessageOptions />
     </Stack>
   );
 };
